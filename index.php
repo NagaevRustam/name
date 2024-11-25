@@ -2,22 +2,21 @@
 
 <?php
 echo "Введите имя" . PHP_EOL;
-$a = trim(fgets(STDIN));
+$a = ucfirst(trim(fgets(STDIN)));
 echo "Введите фамилию" . PHP_EOL;
-$b = trim(fgets(STDIN));
-// echo "Введите отчество" . PHP_EOL;
-// $c = trim(fgets(STDIN));
-$pos = mb_strpos($a, $b);
-//$str = str_replace("р", "Р", "рустам");
-var_dump($pos) . PHP_EOL;
+$b = ucfirst(trim(fgets(STDIN)));
+echo "Введите отчество" . PHP_EOL;
+$c = ucfirst(trim(fgets(STDIN)));
 
-//var_dump(mb_strpos($a, 'руст'));
+$fullName = "\n" . "$b " . "$a " . "$c";
+echo "$fullName" . PHP_EOL;
 
+$rest1 = substr("$a", 0, 1);
+$rest2 = substr("$b", 0, 1);
+$rest3 = substr("$c", 0, 1);
+$surnameAndInitials = "$b " . "$rest1. " . "$rest3." . PHP_EOL;
+echo "$surnameAndInitials";
 
-$fullName = fwrite(STDOUT, "$a") . PHP_EOL;
-// echo "$fullName";
-
-//$fio = 'ИИИ';
-//$surnameAndInitials = 'Иванов И.И.';
-
+$fio = "$rest2" . "$rest1" . "$rest3";
+echo "$fio" . PHP_EOL;
 ?>
