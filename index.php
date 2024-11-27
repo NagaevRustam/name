@@ -1,20 +1,10 @@
-#!/usr/bin/env php
-
 <?php
-// Реализация с вводом ФИО в  латинице
-// echo "Введите имя" . PHP_EOL;
-// $a = mb_ucfirst(trim(fgets(STDIN)));
-// echo "Введите фамилию" . PHP_EOL;
-// $b = ucfirst(trim(fgets(STDIN)));
-// echo "Введите отчество" . PHP_EOL;
-// $c = ucfirst(trim(fgets(STDIN)));
-$a = 'иван';
-$b = 'иванов';
-$c = 'иванович';
-
-$a = mb_ucfirst($a);
-$b = mb_ucfirst($b);
-$c = mb_ucfirst($c);
+echo "Введение имя: \n> ";
+$a = mb_ucfirst(trim(fgets(STDIN)));
+echo "Введение фамилию: \n> ";
+$b = mb_ucfirst(trim(fgets(STDIN)));
+echo "Введение отчество: \n> ";
+$c = mb_ucfirst(trim(fgets(STDIN)));
 
 $fullName = "$b " . "$a " . "$c";
 echo "\n" . 'Полное имя: ' . "$fullName" . PHP_EOL;
