@@ -1,3 +1,5 @@
+#!/usr/bin/env php
+
 <?php
 echo "Введение имя: \n> ";
 $a = mb_ucfirst(trim(fgets(STDIN)));
